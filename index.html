@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather challenge</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous" />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="https://kit.fontawesome.com/b7d825f839.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="src/styles.css" />
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1 id="city">BRUSSELS</h1>
+            <h2 id="date">Sunday 08.06.2020</h2>
+            <h2 id="time">10:50</h2>
+        </header>
+        <div id="weather-info">
+            <h1 id="temperature">
+                <span id="number">24</span> <a href="#" id="celsius-temp">°C</a><span id="separation"> | </span><a
+                    href="#" id="farenheit-temp">°F</a>
+            </h1>
+
+            <h2 id="precipitation">Precipitation: 12%</h2>
+            <h2 id="wind">3km/h</h2>
+        </div>
+        <div id="cloud-icon">
+            <i class="fas fa-cloud-sun"></i>
+        </div>
+        <div id="form">
+            <form id="city-form">
+                <input type="text" id="city-input" placeholder="Enter a city" autocomplete="off" />
+                <input type="submit" value="Go" id="city-button" />
+                <button id="current">Current</button>
+            </form>
+        </div>
+        <hr />
+        <footer>
+            <div id="days">
+                <div class="row">
+                    <div class="col">Monday</div>
+
+                    <div class="col">Tuesday</div>
+
+                    <div class="col">Wednesday</div>
+
+                    <div class="col">Thursday</div>
+
+                    <div class="col">Friday</div>
+                </div>
+            </div>
+            <div id="icons-days">
+                <div class="row">
+                    <div class="col" id="Monday-icon"><i class="fas fa-sun"></i></div>
+
+                    <div class="col" id="Tuesday-icon">
+                        <i class="fas fa-cloud-rain"></i>
+                    </div>
+
+                    <div class="col" id="Wednesday-icon">
+                        <i class="fas fa-sun"></i>
+                    </div>
+
+                    <div class="col" id="Thursday-icon">
+                        <i class="fas fa-cloud-rain"></i>
+                    </div>
+
+                    <div class="col" id="Friday-icon"><i class="fas fa-sun"></i></div>
+                </div>
+            </div>
+            <div id="temperature-days">
+                <div class="row">
+                    <div class="col">20°-15°</div>
+
+                    <div class="col">20°-17°</div>
+
+                    <div class="col">18°-15°</div>
+
+                    <div class="col">16°-15°</div>
+
+                    <div class="col">20°-14°</div>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script src="src/index.js"></script>
+</body>
+
+</html>
