@@ -72,6 +72,12 @@ function showTemperature(response) {
   let city = document.querySelector("#city");
   let currentCity = response.data.name;
   city.innerHTML = currentCity;
+  let currentPrecipitation = reponse.data.main.humidity;
+  let precipitation = document.querySelector("#precipitationnum");
+  precipitation.innerHTML = currentPrecipitation;
+  let currentWind = response.data.wind.speed;
+  let wind = document.querySelector("#wind-number");
+  wind.innerHTML = currentWind;
 }
 function givePosition(position) {
   let apiKey = "862f866e1d57a0b13aa1f2ed2f86af99";
@@ -91,16 +97,4 @@ function setPosition(event) {
 let currentButton = document.querySelector("#current");
 currentButton.addEventListener("click", setPosition);
 
-function givePrecipitation(precipitation) {
-  let apiKey = "862f866e1d57a0b13aa1f2ed2f86af99";
-  let units = "metric";
-  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&units=${units}&appid=${apiKey}`;
-
-  axios.get(apiUrl).then(showPrecipitationWind);
-}
-
-function showPrecipitationWind(response) {
-  let currentPrecipitation = reponse.data.main.humidity;
-  let precipitation = document.querySelector("#precipitationnum");
-  precipitation.innerHTML = currentPrecipitation;
 }
